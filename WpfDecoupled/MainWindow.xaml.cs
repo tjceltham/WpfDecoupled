@@ -33,7 +33,17 @@ namespace WpfDecoupled
             // to change the textbox I had to give it a name using x:Name="t1" in.xaml file
             // looks like wpf isn't too difficult if you don't use it's flashy bindings
             t1.Text =  ""+g.getX();
+            if (g.getX() % 2 == 0)
+            {
+                b1.Background = new SolidColorBrush(System.Windows.Media.Colors.Red);
+                //without bindings
+               
+            }
+            else
+            {
+                b1.Background = new SolidColorBrush(System.Windows.Media.Colors.Green);
 
+            }
             
         }
     }
